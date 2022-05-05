@@ -793,7 +793,7 @@ ul.social_icon li a:hover {
 .copyright a:hover {
      color: #23262d;
 }
-
+           
 .mapClass iframe{
      margin-top: 20px;
      width: 100%;
@@ -801,6 +801,54 @@ ul.social_icon li a:hover {
      margin-left: 3px;
      margin-right: 3px;
 }
+.js-scroll {
+     opacity: 0;
+     transition: opacity 500ms;
+   }
+   .js-scroll.scrolled {
+     opacity: 1;
+     animation: fade-in-bottom 1s ease-in-out both;
+   }
+   
+   @keyframes fade-in-bottom {
+     0% {
+       -webkit-transform: translateY(50px);
+       transform: translateY(50px);
+       opacity: 0;
+     }
+     100% {
+       -webkit-transform: translateY(0);
+       transform: translateY(0);
+       opacity: 1;
+     }
+   }
 
 /** end footer **/
 
+.modal {
+     display: none; 
+     position: fixed; 
+     z-index: 1; 
+     padding-top: 0; 
+     left: 0;
+     top: 50;
+     width: 100%; 
+     height: 100%; 
+     overflow: auto;
+   }
+   .modal-content {
+     background-image: linear-gradient( 135deg, #2AFADF     10%, #C346C2 100%);
+     margin: auto;
+     padding: 20px;
+     width: 80%;
+   }
+   .modal-content p{
+     font-size: 18px;
+     color: white;
+   }
+   .close {
+     color: #aaaaaa;
+     float: right;
+     font-size: 28px;
+     font-weight: bold;
+   }
